@@ -1,6 +1,9 @@
 // import the CSS framework
 @import "bootstrap";
 
+// Font Awesome
+@import "font-awesome";
+
 // make all images responsive by default
 img {
   @extend .img-responsive;

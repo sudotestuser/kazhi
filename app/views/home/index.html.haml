@@ -1,4 +1,5 @@
 %h3 Home
+%input#speech-button{:name => "utterance", :type => "text", "x-webkit-speech" => ""}
 - @users.each do |user|
   %p
     User: #{link_to user.name, user}
