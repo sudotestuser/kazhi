@@ -1,0 +1,253 @@
+
+.camera_tag {
+  background: #777;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  width: 320px;
+  height: 240px;
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-family: "font-awesome","arial",sans-serif;
+}
+
+.camera_tag .cameratag_screen {
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+.camera_tag .cameratag_settings_btn {
+  position:absolute;
+  top:5px;
+  right:5px;
+  height:20px;
+}
+
+.camera_tag .cameratag_alternatives {
+  position: absolute;
+  bottom:5px;
+  left:5px;
+  right:5px;
+  font-size:.8em;
+  color:#ccc;
+  text-shadow: 1px 1px 2px #333;
+  text-align:center;
+}
+
+.camera_tag .cameratag_alternatives a:hover, .camera_tag .cameratag_alternatives a.selected {
+  color:#f8f8f8;
+  background:#9A2720;
+  text-transform:capitalize;
+  text-shadow:none;
+  text-decoration:none;
+}
+
+.camera_tag .cameratag_screen .cameratag_prompt {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: #000;
+  text-align: center;
+}
+
+.camera_tag .cameratag_screen.cameratag_start {
+  background: url(//cameratag.com/assets/sill.png) bottom center no-repeat;
+  background-size: contain;
+}
+
+.camera_tag .cameratag_screen.cameratag_start:hover .cameratag_record_button {
+  text-shadow: none;
+}
+
+.camera_tag .cameratag_screen.cameratag_start .cameratag_record_button {
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  line-height: 1em;
+  margin-top: -1em;
+  text-shadow: none;
+  font-size: 1.5em;
+  color: #f8f8f8;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.camera_tag .cameratag_screen.cameratag_start .cameratag_record_button .cameratag_record_circle {
+  color: #9A2720;
+  font-size: 3em;
+  vertical-align: -.2em;
+}
+
+.camera_tag .cameratag_screen.cameratag_detect {
+  background: url(//cameratag.com/assets/wave.png) bottom center no-repeat;
+  background-size: contain;
+}
+
+.camera_tag .cameratag_screen.cameratag_count .cameratag_countdown_status, .camera_tag .cameratag_screen.cameratag_upload .cameratag_upload_status {
+  font-size: 7em;
+  position: absolute;
+  top: 50%;
+  margin-top: -.6em;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.camera_tag .cameratag_screen.cameratag_recording img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.camera_tag .cameratag_screen.cameratag_accept {
+  padding: 10px;
+}
+
+.camera_tag .cameratag_screen.cameratag_accept .cameratag_accept_btn, .camera_tag .cameratag_screen.cameratag_accept .cameratag_rerecord_btn, .camera_tag .cameratag_screen.cameratag_accept .cameratag_play_btn {
+  display: block;
+  height: 29%;
+  margin-bottom: 3%;
+  text-align: center;
+  border: solid 1px white;
+  color: #fff;
+  background: #000;
+}
+
+.camera_tag .cameratag_screen.cameratag_accept .cameratag_accept_btn span, .camera_tag .cameratag_screen.cameratag_accept .cameratag_rerecord_btn span, .camera_tag .cameratag_screen.cameratag_accept .cameratag_play_btn span {
+  display: block;
+  top: 50%;
+  position: relative;
+  margin-top: -.5em;
+}
+
+.camera_tag .cameratag_screen.cameratag_accept .cameratag_accept_btn:hover, .camera_tag .cameratag_screen.cameratag_accept .cameratag_rerecord_btn:hover, .camera_tag .cameratag_screen.cameratag_accept .cameratag_play_btn:hover {
+  border: solid 1px #089fbf;
+}
+
+.camera_tag .cameratag_screen.cameratag_accept .cameratag_accept_btn:hover span, .camera_tag .cameratag_screen.cameratag_accept .cameratag_rerecord_btn:hover span, .camera_tag .cameratag_screen.cameratag_accept .cameratag_play_btn:hover span {
+  color: #089fbf;
+}
+
+.camera_tag .cameratag_screen.cameratag_wait {
+  background: #000;
+}
+
+.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+}
+
+.camera_tag .cameratag_screen.cameratag_wait .cameratag_spinner img {
+  width: 40px;
+}
+
+.camera_tag .cameratag_screen.cameratag_completed {
+  background: #000;
+}
+
+
+
+.camera_tag .cameratag_screen.cameratag_completed .cameratag_thumb_bg {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.camera_tag .cameratag_screen.cameratag_completed .cameratag_checkmark {
+  color: #fff;
+  font-size: 2.5em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  width: 100%;
+}
+
+.camera_tag .cameratag_screen.cameratag_completed .cameratag_checkmark .check {
+  color: #09a72e;
+}
+
+.camera_tag .cameratag_screen.cameratag_error {
+  background: #000;
+}
+
+.camera_tag .cameratag_screen.cameratag_error .cameratag_error_message {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  top: 50%;
+  margin-top: -1.5em;
+  font-size: 2em;
+  color: #fff;
+}
+
+.camera_tag .cameratag_screen.cameratag_sms .cameratag_sms_prompt {
+  text-align: left;
+  top: 50%;
+  position: absolute;
+  margin-top: -90px;
+  padding:20px;
+  line-height: 1.4em;
+}
+
+
+.camera_tag .cameratag_screen.cameratag_sms .cameratag_sms_prompt input {
+  margin-top:5px;
+  width:100%;
+  font-size:18px;
+  border-top: solid 1px #999;
+  border-bottom: solid 1px #ddd;
+  outline:none;
+  background:#ccc;
+}
+
+
+.camera_tag .cameratag_screen.cameratag_sms .cameratag_sms_prompt .cameratag_send_sms {
+  padding:10px;
+  line-height: 50px;
+  background: #9A2720;
+  color:#fff;
+} 
+
+
+.camera_tag .cameratag_screen.cameratag_check_phone .cameratag_check_phone_prompt {
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  font-size: 1.4em;
+  left: 10px;
+  right: 10px;
+  font-weight: 200;
+}
+
+.camera_tag .cameratag_screen.cameratag_check_phone .cameratag_check_phone_url {
+  position:absolute;
+  bottom:5px;
+  font-size:12px;
+  color:#ccc;
+  text-align: center;
+  width:100%;
+}
+  
