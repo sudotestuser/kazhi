@@ -5,12 +5,10 @@
     %title= content_for?(:title) ? yield(:title) : 'Kazhi'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Kazhi'}"}
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "http://cameratag.com/1.9/cameratag.js", "data-turbolinks-track" => true
-    = render :partial => 'layouts/ga'
+    = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    = render 'layouts/navigation'
+    = render 'layouts/messages'
+    = yield
+    = render :partial => 'layouts/ga'

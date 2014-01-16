@@ -70,7 +70,6 @@ select_language.selectedIndex = 6;
 updateCountry();
 select_dialect.selectedIndex = 6;
 showInfo('info_start');
-results.style.display = 'none';
 
 function updateCountry() {
   for (var i = select_dialect.options.length - 1; i >= 0; i--) {
@@ -80,7 +79,7 @@ function updateCountry() {
   for (var i = 1; i < list.length; i++) {
     select_dialect.options.add(new Option(list[i][1], list[i][0]));
   }
-  select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
+  select_dialect.style.display = list[1].length == 1 ? 'none' : 'inline-block';
 }
 
 var final_transcript = '';
@@ -118,10 +117,8 @@ if (!('webkitSpeechRecognition' in window)) {
     if (event.error == 'not-allowed') {
       if (event.timeStamp - start_timestamp < 100) {
         showInfo('info_blocked');
-        info_denied.style.display = 'block';
       } else {
         showInfo('info_denied');
-        info_denied.style.display = 'block';
       }
       ignore_onend = true;
     }
@@ -159,9 +156,6 @@ if (!('webkitSpeechRecognition' in window)) {
     final_transcript = capitalize(final_transcript);
     final_span.innerHTML = linebreak(final_transcript);
     interim_span.innerHTML = linebreak(interim_transcript);
-    if (final_transcript || interim_transcript) {
-      showButtons('inline-block');
-    }
   };
 }
 
@@ -183,15 +177,6 @@ function capitalize(s) {
   return s.replace(first_char, function(m) { return m.toUpperCase(); });
 }
 
-function copyButton() {
-  if (recognizing) {
-    recognizing = false;
-    recognition.stop();
-  }
-  copy_button.style.display = 'none';
-  showInfo('copy_info');
-}
-
 function startButton(event) {
   if (recognizing) {
     recognition.stop();
@@ -205,7 +190,6 @@ function startButton(event) {
   interim_span.innerHTML = '';
   start_img.className = 'fa fa-microphone fa-2x fa-spin';
   showInfo('info_allow');
-  showButtons('none');
   start_timestamp = event.timeStamp;
 }
 
@@ -213,20 +197,11 @@ function showInfo(s) {
   if (s) {
     for (var child = info.firstChild; child; child = child.nextSibling) {
       if (child.style) {
-        child.style.display = child.id == s ? 'inline' : 'none';
+        child.style.display = child.id == s ? 'block' : 'none';
       }
     }
     info.style.visibility = 'visible';
   } else {
     info.style.visibility = 'hidden';
   }
-}
-
-var current_style;
-function showButtons(style) {
-  if (style == current_style) {
-    return;
-  }
-  current_style = style;
-  copy_button.style.display = style;
 }

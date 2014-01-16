@@ -79,6 +79,7 @@
   font-size: 1.5em;
   color: #f8f8f8;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-decoration:none !important;
 }
 
 .camera_tag .cameratag_screen.cameratag_start .cameratag_record_button .cameratag_record_circle {
