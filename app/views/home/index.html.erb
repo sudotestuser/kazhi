@@ -11,15 +11,12 @@
     <div class="item active">
       <div class="container">
         <div class="carousel-caption">
-          <p id="results">
-            <span id="final_span" class="final"></span>
-            <span id="interim_span" class="interim"></span>
-          </p>
-          <h1 id="div_language">
+          <h1>Web Speech API</h2>
+          <h2 id="div_language">
             <select id="select_language" onchange="updateCountry()"></select>
             <select id="select_dialect"></select>
             <button class="btn" id="start_button" onclick="startButton(event)"><i id="start_img" class="fa fa-microphone fa-2x"></i></button>
-          </h1>
+          </h2>
           <div id="info">
             <h3 id="info_start">Click on the microphone icon and begin speaking.</h3>
             <h3 id="info_speak_now">Speak now.<br>Press Enter or click on the spinning microphone when finished</h3>
@@ -31,6 +28,10 @@
             <h3 id="copy_info">Press Control-C to copy text.<br>(Command-C on Mac.)</h3>
             <h3 id="email_info">Text sent to default email application.<br>(See chrome://settings/handlers to change.)</h3>
             <h3 class="alert alert-warning" id="info_upgrade">Web Speech API is not supported by your browser. Download <a href="//www.google.com/chrome">Chrome</a> version 25 or later.</h3>
+          </div>
+          <div id="results">
+            <p id="final_span" class="final"></p>
+            <p id="interim_span" class="interim"></p>
           </div>
         </div>
       </div>

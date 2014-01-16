@@ -4,7 +4,8 @@
   display: inline-block;
   position: relative;
   color: #fff;
-  width: 320px;
+  min-width: 300px;
+  width: auto !important;
   height: 240px;
   -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
