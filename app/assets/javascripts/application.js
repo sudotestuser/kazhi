@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require speech
 //= require bootstrap
+//= require speech
 //= require_tree .

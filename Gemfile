@@ -14,6 +14,7 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'figaro'
 gem 'haml-rails'
+gem 'rest-client'
 gem 'simple_form'
 gem 'thin'
 group :development do
