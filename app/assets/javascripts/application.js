@@ -16,5 +16,4 @@
 //= require bootstrap
 //= require analytics
 //= require speech
-//= require camera
 //= require_tree .
