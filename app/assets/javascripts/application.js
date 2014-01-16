@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require speech
+//= require analytics
 //= require_tree .
