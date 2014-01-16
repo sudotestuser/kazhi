@@ -105,20 +105,23 @@ if (!('webkitSpeechRecognition' in window)) {
   recognition.onerror = function(event) {
     if (event.error == 'no-speech') {
       start_img.className = 'fa fa-microphone fa-2x';
-      info.style.display = 'none';
       showInfo('info_no_speech');
+      info_no_speech.style.display = 'block';
       ignore_onend = true;
     }
     if (event.error == 'audio-capture') {
       start_img.className = 'fa fa-microphone fa-2x';
       showInfo('info_no_microphone');
+      info_no_microphone.style.display = 'block';
       ignore_onend = true;
     }
     if (event.error == 'not-allowed') {
       if (event.timeStamp - start_timestamp < 100) {
         showInfo('info_blocked');
+        info_denied.style.display = 'block';
       } else {
         showInfo('info_denied');
+        info_denied.style.display = 'block';
       }
       ignore_onend = true;
     }
@@ -164,7 +167,9 @@ if (!('webkitSpeechRecognition' in window)) {
 
 function upgrade() {
   start_button.style.visibility = 'hidden';
+  div_language.style.display = 'none';
   showInfo('info_upgrade');
+  info_upgrade.style.display = 'block';
 }
 
 var two_line = /\n\n/g;
