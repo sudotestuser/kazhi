@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require speech
 //= require analytics
+//= require speech
 //= require_tree .
